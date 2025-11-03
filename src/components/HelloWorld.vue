@@ -17,6 +17,141 @@ const count = ref(0)
     </p>
   </div>
 
+  <hr>
+    <br>
+    <label for="dbpath">Enter the path or name of the database</label>
+    <input id="dbpath" type="text">
+    <br>
+    <br>
+    <input type="checkbox" id="autocommit" name="AUTOCOMMIT" value=true>
+    <label for="autocommit"> want AUTOCOMMIT enabled</label>
+    <br>
+    <br>
+    <input type="checkbox" id="isuri" name="URI" value=true>
+    <label for="isuri"> Is path an SQLITE URI</label>
+    <br>
+    <br>
+    <button onclick="window.api.path()">Enter path of the database</button>
+    <br>
+    <p id="pout"></p>
+    <hr>
+    <br>
+    <label for="singlequery">Enter the query eg 'INSERT INTO sqlite_master (name, type, sql) VALUES (?, ?, ?)'</label>
+    <input id="singlequery" type="text">
+    <br>
+    <br>
+    <label for="value">Enter the value in array eg ["name", "query", "SQL"]</label>
+    <input id="value" type="text">
+    <br>
+    <br>
+    <button onclick="window.api.equery()">Execute a Single query</button>
+    <br>
+    <p id="pout1"></p>
+    <hr>
+    <br>
+    <label for="fetchallquery">Enter the query eg 'SELECT * FROM sqlite_master'</label>
+    <input id="fetchallquery" type="text">
+    <br>
+    <br>
+    <label for="fetchallvalue">Enter the value in array eg ["name", "query", "SQL"]</label>
+    <input id="fetchallvalue" type="text">
+    <br>
+    <br>
+    <button onclick="window.api.fetchall()">Fetch all the records from the database</button>
+    <br>
+    <p id="poutfa"></p>
+    <hr>
+    <br>
+    <label for="fetchonequery">Enter the query eg 'SELECT * FROM sqlite_master'</label>
+    <input id="fetchonequery" type="text">
+    <br>
+    <br>
+    <label for="fetchonevalue">Enter the value in array eg ["name", "query", "SQL"]</label>
+    <input id="fetchonevalue" type="text">
+    <br>
+    <br>
+    <button onclick="window.api.fetchone()">Fetch only one record from the database</button>
+    <br>
+    <p id="poutfo"></p>
+    <hr>
+    <br>
+    <label for="fetchmanyquery">Enter the query eg 'SELECT * FROM sqlite_master'</label>
+    <input id="fetchmanyquery" type="text">
+    <br>
+    <br>
+    <label for="fetchmanyvalue">Enter the value in array eg ["name", "query", "SQL"]</label>
+    <input id="fetchmanyvalue" type="text">
+    <br>
+    <br>
+    <label for="fetchmanysize">Enter the size eg 2</label>
+    <input id="fetchmanysize" type="int">
+    <br>
+    <br>
+    <button onclick="window.api.fetchmany()">Fetch multiple records from the database</button>
+    <br>
+    <p id="poutfm"></p>
+    <hr>
+    <br>
+    <label for="query">Enter the query</label>
+    <input id="query" type="text">
+    <br>
+    <br>
+    <label for="values">Enter the values in 2d array eg [["n", 2, 2.5], [1, 2, 3]]</label>
+    <input id="values" type="text">
+    <br>
+    <br>
+    <button onclick="window.api.mquery()">Execute Multiple query</button>
+    <br>
+    <p id="pout2"></p>
+    <hr>
+    <br>
+    <label for="scriptPath">Enter the sql script path</label>
+    <input id="scriptPath" type="text">
+    <button onclick="window.api.escript()">Execute SQL Script</button>
+    <br>
+    <p id="pout3"></p>
+    <hr>
+    <br>
+    <label for="extensionPath">Enter the extension path</label>
+    <input id="extensionPath" type="text">
+    <button onclick="window.api.load_extension()">Load Extension</button>
+    <br>
+    <p id="pout4"></p>
+    <hr>
+    <br>
+    <label for="backupPath">Enter the backup path</label>
+    <input id="backupPath" type="text">
+    <br>
+    <br>
+    <label for="pages">Enter the pages</label>
+    <input id="pages" value=-1 type="number">
+    <br>
+    <br>
+    <label for="name">Enter the name of the backup db</label>
+    <input id="name" value="main" type="text">
+    <br>
+    <br>
+    <label for="sleep">Enter the sleep time</label>
+    <input id="sleep" value=0.250 type="number">
+    <br>
+    <br>
+    <button onclick="window.api.backup()">Backup</button>
+    <br>
+    <p id="pout5"></p>
+    <hr>
+    <br>
+    <label for="iterdumpPath">Enter the path</label>
+    <input id="iterdumpPath" type="text">
+    <br>
+    <br>
+    <label for="iterdumpFilter">Enter the filter</label>
+    <input id="iterdumpFilter" type="text">
+    <br>
+    <br>
+    <button onclick="window.api.iterdump()">Iterdump</button>
+    <br>
+    <p id="pout6"></p>
+
   <p>
     Check out
     <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
